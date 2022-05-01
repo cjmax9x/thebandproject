@@ -1,0 +1,477 @@
+/* Thứ tự làm
+1. Từ ngoài vào trong 
+2. Từ trên xuống dưới
+3. Từ tổng quan đến chi tiết */
+/* 
+
+    Chi tiết từng phần
+1. vị trí
+2. Kích thước ( witdh, height )
+3. Mầu sắc
+4. Kiểu dáng ( kiểu chữ, hình tròn, vuông,...
+ */
+
+ /* reset css */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* font cho CSS */
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+#main { 
+    max-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#content .text {
+    color: white !important;
+}
+/* header css */
+#header{
+    height: 46px;
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+/* nav css */
+#nav {
+    display: inline-block;
+}
+#nav > li:hover .subnav {
+    display: block;
+}
+#nav>li {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+#nav > li > a{
+    color: white;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+    cursor: pointer;
+}
+/* #nav > li:hover > a {
+    background: white;
+    color: black;
+} */
+
+/* subnav css */
+#nav > li > .subnav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px ;
+    background: white;
+    box-shadow: 0 0 30px rgba(16, 17, 17, 0.5);
+}
+#nav > li > .subnav > li {
+    list-style-type: none;
+}
+#nav > li > .subnav > li > a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    padding: 8px 16px;
+}
+
+/* arrow and search icon */
+#nav > li > a > .arrow {
+    font-size: 8px;
+}
+#header > .search {
+    float: right;
+    max-height: 46px;
+}
+#header > .search > .search-btn {
+    color: white;
+    line-height: 46px;
+    display: block;
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: 700;
+}
+#header > .search:hover > .search-btn {
+    background-color: red;
+    cursor: pointer;
+}
+/* slider css */
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 75%;
+    background: url(../imgs/Picnic.jpg) top center / cover no-repeat;
+}
+#slider>#text{
+    text-align: center;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-transform: uppercase;
+    height:80px;
+}
+#slider>#text>.maintext{
+    margin-bottom: 25px;
+    height: 40px;
+}
+
+
+/* content the band css */
+#content .content-section .content-brand{
+    text-align: center;
+    font-size: 30px;
+    margin: 15px 0px;
+}
+#content .content-section .content-nick{
+    text-align: center;
+    font-size: 15px;
+    margin: 15px 0px;
+    font-style: italic;
+    opacity: 0.6;
+
+} 
+#content>.content-section>.content-p{
+    text-align: justify;
+    font-size: 15px;
+    margin: 15px 0px;
+    line-height: 1.4;
+}
+
+#content .content-section {
+    padding: 64px 16px ;
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* content member css */
+#content .member-team {
+    float: left;
+    width: calc(100% / 3);
+    text-align: center;
+}
+#content .member-team .name {
+    padding: 15px 0px;
+    font-size: 15px;
+}
+#content .member-team .name-pic {
+    width: 154px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+#content .content-tour {
+ background-color: #111;
+}
+#content .schuele {
+    background: white;
+    list-style-type: none;
+    padding: 11px 16px ;
+    font-size: 15px;
+    color: #757575;
+    border-bottom: 1px solid #ccc;
+}
+#content .schuele-list {
+    margin-top: 45px;
+}
+#content .span {
+    background: #f44336;
+    color: white;
+    padding: 0px 8px;
+    line-height: 22.5px;
+    display: inline-block;
+    margin: 0 16px;
+}
+#content .span1 {
+    background: black;
+    float: right;
+    padding: 0 8px;
+    margin-right: 16px;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: -4px;
+}
+#content .content-tickets {
+    padding: 32px 8px;
+    margin-left: -16px;
+    margin-right: -16px;
+
+}
+#content .ticket {
+    float: left;
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 0 8px;
+    margin-bottom: 16px;
+}
+#content .p1 {
+    background: white;
+    padding: 0.15px 16px;
+    text-align: left;
+}
+#content .ticket-img{
+    display: block;
+    width: 100%;
+}
+#content .ticket-img:hover {
+    opacity: 0.60;
+}
+#content .ticket-title {
+    margin:15px 0px
+}
+#content .ticket-time, #content .ticket-d{
+    margin-bottom: 15px;
+}
+#content .click {
+    background: black;
+    color: white;
+    font-size: 15px;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    display: inline-block;
+    line-height: 22.5px;
+    text-decoration: none;
+    border: none;
+}
+#content .ticket-time {
+    opacity: 0.60;
+}
+#content .click:hover {
+    color: black;
+    background: #ccc;
+    cursor: pointer;
+}
+#content .ticket-d {
+    line-height: 1.4;
+}
+.madal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    display: none; 
+}
+.open {
+    display: flex;
+}
+.madal-container {
+    max-width: calc(100% - 32px);
+    width: 900px;
+    min-height: 420px;
+    background-color: white;
+    position: relative;
+    animation: madalmotion ease 0.5s;
+
+}
+.madal-close {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 13px
+}
+.madal-close:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+.madal-tickets{
+    background-color: #009688 ;
+    width: 100%;
+    height: 129px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 30px;
+    color:white;
+    letter-spacing: 3px;
+    cursor: default;
+}
+.madal-bag {
+    padding: 10px;
+
+}
+
+.madal-body{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.madal-icon{
+    padding-right: 10px;
+}
+.madal-quantity{
+    font-size: 15px;
+    margin: 15px 0;
+    cursor: default;
+    display: block;
+}
+#madal-input, #madal-input1 {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+.madal-btn{
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    background: #009688;
+    display: block;
+    padding: 16px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    color:white;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+.madal-btn:hover {
+    opacity: 0.3;
+}
+.madal-help{
+    text-align: right;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.madal-help > a {
+    text-decoration: none;
+}
+@keyframes madalmotion {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+
+    }
+    to {
+        transform: translateY(0%) ;
+        opacity: 1;
+    }
+}
+
+
+
+#content .contact {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 100px;
+
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#content .contact-infor {
+    width: 50%;
+    float: left;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+#content .contact-infor a {
+    opacity: 0.9;
+}
+#content .contact-infor p:hover a {
+    opacity: 0.5;
+}
+#content .ti-location-pin, #content .ti-mobile, #content .ti-email{
+    padding: 10px;
+    font-weight: 700;
+}
+
+
+
+
+
+
+#content .contact-input {
+    width: 50%;
+    float: left;
+}
+#content .contact-name {
+    width: 50%;
+    float: left;
+    display: block;
+}
+#content .contact-email {
+    width: 50%;
+    float: left;
+    display: block;
+
+}
+.contact .input-mail {
+    float: left;
+    width: 46%;
+    padding: 10px;
+    border: 1px solid #ccc;
+
+}
+.contact .input-name {
+    float: left;
+    width: 46%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-right: 8%;
+
+}
+.contact .input-message {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+}#content .contact-send {
+    float: right;
+    padding: 10px 15px ;
+    margin-top: 14px;
+    background-color: black;
+    color:white ;
+    border: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+#content .contact-send:hover {
+    opacity: 0.5;
+}
+#content .content-pri {
+    padding: 64px 16px 47px 16px;
+}
+
+#content .bgr {
+    width: 100%;
+}
+#footer {
+    text-align: center;
+    opacity: 0.6;
+    padding: 64px 0px;
+}
+.footer-sign, .footer-p {
+    margin: 20px 0px;
+    font-size: 30px;
+}
+.footer-link {
+    color: black;
+    opacity: 0.6;
+}

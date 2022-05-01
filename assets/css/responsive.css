@@ -1,0 +1,95 @@
+@media(min-width:741px){
+    #header > #menu-mobile{
+        display: none;
+        }
+
+    #nav > li:hover > a {
+        background: white;
+        color: black;
+    }
+    #nav > li > .subnav > li:hover > a{
+        background-color: #e2dede94;
+        color: white;
+    }
+}
+@media(max-width:740px){
+    #nav > li:active > a {
+        background: white;
+        color: black;
+    }
+    #nav > li > .subnav > li:active > a{
+        background-color: #e2dede94;
+        color: white;
+    }
+    #header {
+        overflow: hidden;}
+
+    #nav > li > .subnav{
+    position: initial;
+    padding: 16px;
+
+    background: black;}
+    
+    #nav > li > .subnav > li >a {
+        color: white;
+        padding: 16px 16px;
+    }   
+    
+    #nav>li {
+        display: block;}
+
+    #nav {
+        display:block;}
+
+    #nav li:first-child {
+        display: inline-block;}
+    
+    #header > .search{
+        display: none;}
+    
+    #header > #menu-mobile {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        max-height: 46px;}
+    
+    #header > #menu-mobile > .ti-menu {
+        color: white;
+        line-height: 46px;
+        display: block;
+        padding: 0 16px;
+        font-size: 14px;
+        font-weight: 700;}
+    #slider>#text>.maintext {  
+        margin-bottom: 15px;
+    }  
+    
+    #content .ticket {
+        float: none;
+        width: 100%;}
+    #content .member-team {    
+        float: none;
+        width: 100%;}   
+    #content .contact-infor {
+        padding-bottom: 10px;
+        width: 100%; 
+        float: none;}
+    #content .contact-input {
+        width: 100%;
+        float: none;}
+    .contact .input-name {
+        margin-right:0;
+        float: none;
+        width: 100%;}
+    .contact .input-mail {
+        float: none;
+        width: 100%;}
+    #content .click {
+        width: 100%;}
+    #content .contact-send {
+        width: 100%;}   
+}
+
+
+
+
